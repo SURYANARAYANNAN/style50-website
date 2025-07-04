@@ -46,7 +46,7 @@
           const payload = { contents: chatHistory };
           // IMPORTANT: Replace "YOUR_GEMINI_API_KEY_HERE" with your actual API key from Google AI Studio.
           // This key is required when running the app locally.
-          const apiKey = "AIzaSyCflwmBcWr7MbxFBZzT_vnaHe4r-HpIGrQ"; // <--- YOUR ACTUAL KEY IS HERE
+          const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Access the key from environment variables
           const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
           // Make the API call to Gemini
